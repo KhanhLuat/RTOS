@@ -13,7 +13,7 @@ int main(void)
   uint32_t system_clock = 0;
   uint32_t hclk         = 0;
   uint32_t apb1_clock   = 0;
-  uint32_t apb2_clock   = 0;s
+  uint32_t apb2_clock   = 0;
 
   rcc_init();
 

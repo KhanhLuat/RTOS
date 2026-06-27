@@ -200,6 +200,91 @@ static void gpio_pin_config(GPIO_TypeDef *port, gpio_num_e pin, gpio_mode_e mode
   }
 }
 
+void gpio_init(void)
+{
+  // Enable clocks for GPIOs
+  RCC_GPIOA_CLK_ENABLE();
+  RCC_GPIOB_CLK_ENABLE();
+  RCC_GPIOC_CLK_ENABLE();
+  RCC_GPIOD_CLK_ENABLE();
+
+  // Enable SYSCFG module to enable GPIO ISRs
+  RCC_SYSCFG_CLK_ENABLE();
+
+  // USER LED
+  gpio_pin_config(USER_LED_PORT,
+                  USER_LED_PIN,
+                  GPIO_MODE_OUTPUT,
+                  GPIO_AF_NONE,
+                  GPIO_OUTPUT_PUSHPULL,
+                  GPIO_SPEED_LOW,
+                  GPIO_PULL_NONE);
+
+  // USER Button
+  gpio_pin_config(USER_BUTTON_PORT,
+                  USER_BUTTON_PIN,
+                  GPIO_MODE_INPUT,
+                  GPIO_AF_NONE,
+                  GPIO_OUTPUT_NONE,
+                  GPIO_SPEED_LOW,
+                  GPIO_PULL_UP);
+
+  // Test pin
+  gpio_pin_config(TEST_PORT,
+                  TEST_PIN,
+                  GPIO_MODE_OUTPUT,
+                  GPIO_AF_NONE,
+                  GPIO_OUTPUT_PUSHPULL,
+                  GPIO_SPEED_FAST,
+                  GPIO_PULL_DOWN);
+
+}
+
+void gpio_write_pin(GPIO_TypeDef *port, gpio_num_e pin, gpio_pin_state_e pin_state)
+{
+  // Set or reset the specified pin
+  if (pin_state != GPIO_PIN_RESET)
+  {
+    // Set the pin (turn on)
+    port->BSRR = (0x1UL << pin);
+  }
+  else
+  {
+    // Reset the pin (turn off)
+    port->BSRR = (0x1UL << (pin + 16));
+  }
+}
+
+gpio_pin_state_e gpio_read_pin(GPIO_TypeDef *port, gpio_num_e pin)
+{
+  gpio_pin_state_e pin_state;
+
+  // Check the state of the pin
+  if ((port->IDR & (0x1UL << pin)) != GPIO_PIN_RESET)
+  {
+    pin_state = GPIO_PIN_SET;   // Pin is in high state
+  }
+  else
+  {
+    pin_state = GPIO_PIN_RESET; // Pin is in low state
+  }
+
+  return pin_state;
+}
+
+void gpio_toggle_pin(GPIO_TypeDef *port, gpio_num_e pin)
+{
+  // Use the gpio_read_pin function to check the current state of the pin
+  if (gpio_read_pin(port, pin) == GPIO_PIN_SET)
+  {
+    gpio_write_pin(port, pin, GPIO_PIN_RESET);
+  }
+  else
+  {
+    gpio_write_pin(port, pin, GPIO_PIN_SET);
+  }
+}
+
 
 
 

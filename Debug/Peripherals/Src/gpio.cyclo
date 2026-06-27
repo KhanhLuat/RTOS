@@ -4,3 +4,7 @@
 ../Peripherals/Src/gpio.c:116:13:gpio_set_output_type	2
 ../Peripherals/Src/gpio.c:141:13:gpio_set_pin_pull	3
 ../Peripherals/Src/gpio.c:174:13:gpio_pin_config	6
+../Peripherals/Src/gpio.c:203:6:gpio_init	1
+../Peripherals/Src/gpio.c:243:6:gpio_write_pin	2
+../Peripherals/Src/gpio.c:258:18:gpio_read_pin	2
+../Peripherals/Src/gpio.c:275:6:gpio_toggle_pin	2

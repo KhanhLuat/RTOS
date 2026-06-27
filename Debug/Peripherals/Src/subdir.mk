@@ -6,14 +6,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Peripherals/Src/flash.c \
+../Peripherals/Src/gpio.c \
 ../Peripherals/Src/rcc.c 
 
 OBJS += \
 ./Peripherals/Src/flash.o \
+./Peripherals/Src/gpio.o \
 ./Peripherals/Src/rcc.o 
 
 C_DEPS += \
 ./Peripherals/Src/flash.d \
+./Peripherals/Src/gpio.d \
 ./Peripherals/Src/rcc.d 
 
 
@@ -24,7 +27,7 @@ Peripherals/Src/%.o Peripherals/Src/%.su Peripherals/Src/%.cyclo: ../Peripherals
 clean: clean-Peripherals-2f-Src
 
 clean-Peripherals-2f-Src:
-	-$(RM) ./Peripherals/Src/flash.cyclo ./Peripherals/Src/flash.d ./Peripherals/Src/flash.o ./Peripherals/Src/flash.su ./Peripherals/Src/rcc.cyclo ./Peripherals/Src/rcc.d ./Peripherals/Src/rcc.o ./Peripherals/Src/rcc.su
+	-$(RM) ./Peripherals/Src/flash.cyclo ./Peripherals/Src/flash.d ./Peripherals/Src/flash.o ./Peripherals/Src/flash.su ./Peripherals/Src/gpio.cyclo ./Peripherals/Src/gpio.d ./Peripherals/Src/gpio.o ./Peripherals/Src/gpio.su ./Peripherals/Src/rcc.cyclo ./Peripherals/Src/rcc.d ./Peripherals/Src/rcc.o ./Peripherals/Src/rcc.su
 
 .PHONY: clean-Peripherals-2f-Src
 

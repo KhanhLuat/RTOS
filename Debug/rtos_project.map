@@ -1282,6 +1282,72 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x11f ./Peripherals/Src/flash.o
  .debug_macro   0x0000000000000000     0xb953 ./Peripherals/Src/flash.o
  .debug_macro   0x0000000000000000       0x6d ./Peripherals/Src/flash.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .group         0x0000000000000000        0xc ./Peripherals/Src/gpio.o
+ .text          0x0000000000000000        0x0 ./Peripherals/Src/gpio.o
+ .data          0x0000000000000000        0x0 ./Peripherals/Src/gpio.o
+ .bss           0x0000000000000000        0x0 ./Peripherals/Src/gpio.o
+ .text.gpio_set_pin_mode
+                0x0000000000000000       0x4c ./Peripherals/Src/gpio.o
+ .text.gpio_set_alt_function
+                0x0000000000000000       0x7c ./Peripherals/Src/gpio.o
+ .text.gpio_set_pin_speed
+                0x0000000000000000       0x84 ./Peripherals/Src/gpio.o
+ .text.gpio_set_output_type
+                0x0000000000000000       0x48 ./Peripherals/Src/gpio.o
+ .text.gpio_set_pin_pull
+                0x0000000000000000       0x68 ./Peripherals/Src/gpio.o
+ .text.gpio_pin_config
+                0x0000000000000000       0x7c ./Peripherals/Src/gpio.o
+ .debug_info    0x0000000000000000      0x489 ./Peripherals/Src/gpio.o
+ .debug_abbrev  0x0000000000000000      0x130 ./Peripherals/Src/gpio.o
+ .debug_aranges
+                0x0000000000000000       0x48 ./Peripherals/Src/gpio.o
+ .debug_rnglists
+                0x0000000000000000       0x32 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000      0x103 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000      0xaa2 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x2e ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x28 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x8e ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x51 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000      0x103 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x6a ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000      0x1df ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x1c ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0xfb ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000     0x1011 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000      0x11f ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000     0xb953 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x6d ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x88 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000       0x19 ./Peripherals/Src/gpio.o
+ .debug_macro   0x0000000000000000      0x1f8 ./Peripherals/Src/gpio.o
+ .debug_line    0x0000000000000000      0x745 ./Peripherals/Src/gpio.o
+ .debug_str     0x0000000000000000    0x517c2 ./Peripherals/Src/gpio.o
+ .comment       0x0000000000000000       0x44 ./Peripherals/Src/gpio.o
+ .debug_frame   0x0000000000000000       0xfc ./Peripherals/Src/gpio.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Peripherals/Src/gpio.o
  .group         0x0000000000000000        0xc ./Peripherals/Src/rcc.o
  .group         0x0000000000000000        0xc ./Peripherals/Src/rcc.o
  .group         0x0000000000000000        0xc ./Peripherals/Src/rcc.o
@@ -1589,6 +1655,7 @@ LOAD ./Middleware/ThirdParty/FreeRTOS/Source/timers.o
 LOAD ./Middleware/ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o
 LOAD ./Middleware/ThirdParty/FreeRTOS/Source/portable/MemMang/heap_4.o
 LOAD ./Peripherals/Src/flash.o
+LOAD ./Peripherals/Src/gpio.o
 LOAD ./Peripherals/Src/rcc.o
 LOAD ./Startup/startup_stm32f411vetx.o
 START GROUP
